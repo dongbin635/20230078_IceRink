@@ -51,5 +51,5 @@ Breakable obstacle's number doesn't exceed 3. If there's number like 13, it's ac
 I received assistance from AI when implementing the interaction for when @ collides with integers, O, and X. 
 However, the AI ​​did not understand the meaning of "hit" and implemented it so that the object interacts when a key is pressed in the direction of the object while @ is adjacent to it.
 Since my original intention was for @ to interact when it is moving and collides with an object, I had to implement it as follows:
-"When @ is in contact with 3 and the arrow key is held down in the direction of the number, the number decreases continuously, but I don't want that to happen. I want the number to decrease only when it collides while moving. How can I achieve this?"
-It seems that when commanding the AI ​​to implement specific code, it fails to take care of detailed aspects such as the meaning of "hit." I had to fix the code using bool 'move'.
+"When @ is in contact with 3 and the arrow key is held down in the direction of the number, the number decreases continuously, but I don't want that to happen. I want the number to decrease only when it collides while moving. How can I achieve this?" I had to fix the code using a bool 'move'.
+The main point is, it seems that when commanding the AI ​​to implement specific code, it fails to take care of detailed aspects such as the meaning of "hit."
