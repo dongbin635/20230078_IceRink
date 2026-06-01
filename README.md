@@ -54,12 +54,12 @@ stage ends. Then player can go to next stage.
 If the ‘@’ hits a bomb ‘X’, the stage ends immediately with a 
 game-over message. Then player can restart that stage.
 
- Breakable obstacles are displayed with an integer number like 
+Breakable obstacles are displayed with an integer number like 
 ‘3’. Each time the ‘@’ hits the obstacle, the number decreases by 1. 
 When the ‘@’ is blocked by the number ‘1’, ‘@’ stops, and then the 
 breakable obstacle disappears.
 
- Player starts with 0 ~ 2 placeable obstacles ‘P’. (Its quantity
+Player starts with 0 ~ 2 placeable obstacles ‘P’. (Its quantity
 differs by stages.) By pressing Space command, the player can enter 
 placing mode. During the placing mode, when player presses the W, A, 
 S, or D command, player can place obstacle ‘P’ in the immediately adjacent location in that direction. If there is already another 
@@ -69,7 +69,7 @@ not move. The player can turn off the placing mode by pressing Space
 command once more. The number of placeable obstacles is displayed on
 the top. The state of placing mode is displayed at the top.
 
- There are total of 5 stages. After clearing the last stage, 
+There are total of 5 stages. After clearing the last stage, 
 player wins.
 
 When you clear a stage, a message appears asking if you want to play the next stage.
@@ -98,7 +98,8 @@ Breakable obstacle's number doesn't exceed 3. If there's number like 13, it's ac
 ## AI Usage
 
 I received assistance from AI when implementing the interaction for when @ collides with integers, O, and X. 
-However, the AI ​​did not understand the meaning of "hit" and implemented it so that the object interacts when a key is pressed in the direction of the object while @ is adjacent to it.
+I put the prompt "When the ‘@’ hits exit ‘O’ after collecting all three keys, the 
+stage ends. If the ‘@’ hits a bomb ‘X’, the stage ends. Breakable obstacles are displayed with an integer number like ‘3’. Each time the ‘@’ hits the obstacle, the number decreases by 1. When the ‘@’ is blocked by the number ‘1’, ‘@’ stops, and then the breakable obstacle disappears." However, the AI ​​did not understand the meaning of "hit" and implemented it so that the object interacts when a key is pressed in the direction of the object while @ is adjacent to it.
 Since my original intention was for @ to interact when it is moving and collides with an object, I had to implement it as follows:
-"When @ is in contact with 3 and the arrow key is held down in the direction of the number, the number decreases continuously, but I don't want that to happen. I want the number to decrease only when it collides while moving. How can I achieve this?" I had to fix the code using a bool 'move'.
+"When @ is in contact with 3 and the arrow key is held down in the direction of the number, the number decreases continuously, but I don't want that to happen. I want the number to decrease only when it collides while moving. How can I achieve this?" Then I had to fix the code using a bool 'move'.
 The main point is, it seems that when commanding the AI ​​to implement specific code, it fails to take care of detailed aspects such as the meaning of "hit."
