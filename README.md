@@ -44,8 +44,6 @@ The game ends when you press N after the next stage message or bomb message appe
 
 ### Caution
 
-Please ensure your terminal window is sufficiently resized (or maximized) before starting the game. If not, it could cause System.ArgumentOutOfRangeException.
-Please do not move or extend/shrink terminal during the game. It could cause rendering artifacts.
 Breakable obstacle's number doesn't exceed 3. If there's number like 13, it's actually two distinct digit blocks (1 and 3) placed side by side, not a block with number thirteen.
 
 ## AI Usage
