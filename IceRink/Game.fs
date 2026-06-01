@@ -60,12 +60,13 @@ module GameLogic =
                 if nextX >= 0 && nextX < s.CurTile.GetLength(1) && nextY >= 0 && nextY < s.CurTile.GetLength(0) then
                     match s.CurTile.[nextY, nextX] with
                     | Exit -> 
-                        if keys >= 3 then
+                        if move && keys >= 3 then
                             over <- true
                             status <- 1
                     | Bomb -> 
-                        over <- true
-                        status <- 2
+                        if move then
+                            over <- true
+                            status <- 2
                     | Weak n ->
                         if move then    
                             if n > 1 then s.CurTile.[nextY, nextX] <- Weak (n - 1)
