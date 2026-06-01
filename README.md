@@ -14,14 +14,14 @@ Please do not move or extend/shrink terminal during the game. It could cause ren
 ### Run
 
 ```bash
-cd 20230078-term
+cd 20230078_IceRink
 dotnet run
 ```
 
 ### Build
 
 ```bash
-cd 20230078-term
+cd 20230078_IceRink
 dotnet build
 ```
 
@@ -83,7 +83,7 @@ Breakable obstacle's number doesn't exceed 3. If there's number like 13, it's ac
 
 ## Project Structure
 ```
-project-example/
+20230078_IceRink/
 ├── IceRink.fsproj     # .NET F# project file
 ├── README.md
 ├── .gitignore
