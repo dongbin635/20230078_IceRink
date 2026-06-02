@@ -97,7 +97,7 @@ Breakable obstacle's number doesn't exceed 3. If there's number like 13, it's ac
 
 ## AI Usage
 
-I received assistance from AI when implementing the interaction for when @ collides with integers, O, and X. 
+I received assistance from GEMINI when implementing the interaction for when @ collides with integers, O, and X. 
 I put the prompt "When the ‘@’ hits exit ‘O’ after collecting all three keys, the 
 stage ends. If the ‘@’ hits a bomb ‘X’, the stage ends. Breakable obstacles are displayed with an integer number like ‘3’. Each time the ‘@’ hits the obstacle, the number decreases by 1. When the ‘@’ is blocked by the number ‘1’, ‘@’ stops, and then the breakable obstacle disappears." However, the AI ​​did not understand the meaning of "hit" and implemented it so that the object interacts when a key is pressed in the direction of the object while @ is adjacent to it.
 Since my original intention was for @ to interact when it is moving and collides with an object, I had to implement it as follows:
